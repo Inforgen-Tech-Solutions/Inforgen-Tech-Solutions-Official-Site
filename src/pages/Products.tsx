@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import FullPage from "../layout/FullPage"
 import ProductCard from "../components/cards/ProductCard"
 import { products } from "../utils/data/product"
-import { Sparkles, Link2Off } from "lucide-react"
+import { Sparkles, LogOut } from "lucide-react"
 import Swal from "sweetalert2"
 
 const Products = () => {
@@ -100,7 +100,7 @@ const Products = () => {
             className="inline-flex items-center gap-2 px-8 py-4 font-sans font-semibold text-accent text-[clamp(0.95rem,2.5vw,1rem)] transition hover:opacity-90"
           >
             See More
-            <Link2Off size={18} />
+            <LogOut size={18} />
           </button>
         </div>
       </main>

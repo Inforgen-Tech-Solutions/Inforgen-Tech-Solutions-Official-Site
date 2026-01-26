@@ -22,7 +22,7 @@ const Home = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mx-auto max-w-7xl px-6 py-14 md:py-32"
+          className="mx-auto max-w-7xl px-6 py-10 md:py-24"
         >
           <div className="flex flex-col items-center text-center space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full border border-muted bg-base px-4 py-2 font-sans text-[clamp(0.75rem,2.5vw,0.875rem)] text-primary">
@@ -31,12 +31,12 @@ const Home = () => {
             </div>
 
             <div className="max-w-4xl space-y-6">
-              <h1 className="font-heading font-bold leading-tight text-primary text-[clamp(1.5rem,6vw,4.5rem)]">
+              <h1 className="font-heading font-bold leading-tight text-primary text-[clamp(1.5rem,6vw,3.5rem)]">
                 Powering Businesses With
                 <span className="text-accent"> Smart Technology</span>
               </h1>
 
-              <p className="mx-auto max-w-3xl font-sans leading-relaxed text-dark text-[clamp(0.8rem,3vw,1.25rem)]">
+              <p className="mx-auto max-w-3xl font-sans leading-relaxed text-dark text-[clamp(0.8rem,3vw,1.15rem)]">
                 Inforgen Tech Solutions delivers software development, hardware
                 solutions, networking, and Starlink installations designed to
                 keep individuals and businesses connected and productive.
@@ -101,7 +101,7 @@ const Home = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mx-auto max-w-7xl px-6 py-16 md:py-24"
+          className="mx-auto max-w-7xl px-6 py-10 md:py-18"
         >
           <div className="mb-16 space-y-4 text-center">
             <span className="inline-block rounded-full border border-muted px-4 py-1.5 font-sans text-[clamp(0.75rem,2.5vw,0.875rem)] text-primary">
@@ -120,10 +120,13 @@ const Home = () => {
             {products.map((product, index) => (
               <ProductCard
                 key={index}
+                id={product.id}
                 name={product.name}
                 imageUrl={product.imageUrl}
                 description={product.description}
                 amount={product.amount}
+                slug={product.slug}
+                category={product.category}
               />
             ))}
           </div>

@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
         {/* Desktop CTA */}
         <div className="hidden md:block">
           <a
-            href="#contact"
+            href="/contact"
             className="rounded-xl bg-accent px-5 py-2.5 font-sans text-sm font-semibold text-primary hover:opacity-90 transition"
           >
             Get a Quote
@@ -64,8 +64,8 @@ const Navbar: React.FC = () => {
         <ul className="flex flex-col gap-6 px-6 py-6 font-sans text-sm text-dark">
           <li><a onClick={() => setIsOpen(false)} href="/#services" className="hover:text-primary">Services</a></li>
           <li><a onClick={() => setIsOpen(false)} href="/#products" className="hover:text-primary">Products</a></li>
-          <li><a onClick={() => setIsOpen(false)} href="/#about" className="hover:text-primary">About</a></li>
-          <li><a onClick={() => setIsOpen(false)} href="/#contact" className="hover:text-primary">Contact</a></li>
+          <li><a onClick={() => setIsOpen(false)} href="/about" className="hover:text-primary">About</a></li>
+          <li><a onClick={() => setIsOpen(false)} href="/contact" className="hover:text-primary">Contact</a></li>
 
           <li>
             <a

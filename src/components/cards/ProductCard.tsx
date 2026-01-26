@@ -1,28 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import type { products } from "../../utils/types/product";
-import Swal from "sweetalert2"
+import { useNavigate } from "react-router-dom";
 
-const ProductCard = ({ name, imageUrl, description, amount }: products) => {
-  const navigateToEcommerce = () => {
-    try {
-      Swal.fire({
-        title: "Leave this site?",
-        text: "You are about to visit our online store.",
-        icon: "info",
-        showCancelButton: true,
-        confirmButtonText: "Continue",
-        cancelButtonText: "Cancel",
-        confirmButtonColor: "#FCA311",
-        cancelButtonColor: "#64748b",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.open("https://google.com", "_blank", "noopener,noreferrer")
-        }
-      })
-    } catch (error) {
-      Swal.fire("Oops", "Could not redirect successfully", "error")
-    }
+const ProductCard = ({ id, name, imageUrl, description, amount, slug }: products) => {
+const navigate = useNavigate()
+
+  const navigateToProduct = () => {
+    navigate(`/products/${slug}`)
   }
 
   return (
@@ -38,7 +23,7 @@ const ProductCard = ({ name, imageUrl, description, amount }: products) => {
 
       <div className="relative flex h-full flex-col p-6">
         <div className="mb-6">
-          <div className="h-48 w-full overflow-hidden rounded-xl bg-muted p-1 transition-transform duration-300 group-hover:scale-110">
+          <div className="h-48 w-full overflow-hidden rounded-xl bg-muted p-1 transition-transform duration-300 group-hover:scale-105">
             <img
               src={imageUrl}
               alt={name}
@@ -71,7 +56,7 @@ const ProductCard = ({ name, imageUrl, description, amount }: products) => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigateToEcommerce()}
+              onClick={() => navigateToProduct()}
               className="flex items-center gap-2 rounded-lg bg-accent px-4 py-2 font-sans text-sm font-semibold text-primary opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 hover:brightness-95"
             >
               View

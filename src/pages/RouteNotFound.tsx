@@ -5,7 +5,7 @@ const RouteNotFound = () => {
     <NavOnly>
       <main>
         <h1 className="text-3xl">
-          Page not Founfd
+          Page not Found
         </h1>
       </main>
     </NavOnly>

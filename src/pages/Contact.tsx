@@ -19,12 +19,12 @@ const Contact = () => {
             viewport={{ once: true }}
             className="mb-16 space-y-6 text-center"
           >
-            <span className="inline-block rounded-full bg-muted px-4 py-1.5 font-sans text-[clamp(0.75rem,2vw,0.85rem)] font-semibold text-primary">
+            <span className="inline-flex items-center gap-2 rounded-full border border-accent bg-base px-4 py-2 text-accent text-[clamp(0.75rem,2.5vw,0.875rem)] font-medium">
               Get In Touch
             </span>
 
             <h1 className="font-heading font-bold text-primary text-[clamp(1.5rem,6vw,2.5rem)] leading-tight">
-              Let’s Talk About Your Project
+              Let Us Talk About Your <span className="block text-accent bg-clip-text">Project</span>
             </h1>
 
             <p className="mx-auto max-w-2xl font-sans text-dark/70 text-[clamp(0.8rem,3vw,1rem)] leading-relaxed">
@@ -133,6 +133,14 @@ const Contact = () => {
             </motion.form>
           </div>
         </section>
+        {/* <section>
+          <div className="map">
+
+          </div>
+          <div className="words">
+            Find Us
+          </div>
+        </section> */}
       </main>
     </FullPage>
   )
