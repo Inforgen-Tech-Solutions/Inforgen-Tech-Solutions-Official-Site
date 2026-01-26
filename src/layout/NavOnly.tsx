@@ -1,13 +1,15 @@
-import React from 'react'
+import type {ReactNode } from 'react';
+import Navbar from '../components/Navbar';
 
-import Navbar from '../components/Navbar'
-import { Outlet } from 'react-router-dom'
+type NavOnlyProps = {
+  children: ReactNode
+}
 
-const NavOnly = () => {
+const NavOnly = ({children} : NavOnlyProps) => {
   return (
     <>
         <Navbar />
-        <Outlet />
+        {children}
     </>
   )
 }

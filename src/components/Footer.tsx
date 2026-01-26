@@ -42,10 +42,10 @@ const Footer = () => {
               Company
             </h4>
             <ul className="space-y-2 text-sm font-sans text-base/80">
-              <li><a href="/#about" className="hover:text-accent">About Us</a></li>
+              <li><a href="/about" className="hover:text-accent">About Us</a></li>
               <li><a href="/services" className="hover:text-accent">Services</a></li>
               <li><a href="/products" className="hover:text-accent">Products</a></li>
-              <li><a href="/#contact" className="hover:text-accent">Contact</a></li>
+              <li><a href="/contact" className="hover:text-accent">Contact</a></li>
             </ul>
           </div>
 

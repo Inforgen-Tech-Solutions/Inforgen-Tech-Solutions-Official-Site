@@ -19,10 +19,10 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-8 font-sans text-sm text-dark">
-          <li><a href="#services" className="hover:text-primary transition">Services</a></li>
-          <li><a href="#products" className="hover:text-primary transition">Products</a></li>
-          <li><a href="#about" className="hover:text-primary transition">About</a></li>
-          <li><a href="#contact" className="hover:text-primary transition">Contact</a></li>
+          <li><a href="/#services" className="hover:text-primary transition">Services</a></li>
+          <li><a href="/#products" className="hover:text-primary transition">Products</a></li>
+          <li><a href="/about" className="hover:text-primary transition">About</a></li>
+          <li><a href="/contact" className="hover:text-primary transition">Contact</a></li>
         </ul>
 
         {/* Desktop CTA */}
@@ -62,10 +62,10 @@ const Navbar: React.FC = () => {
         }`}
       >
         <ul className="flex flex-col gap-6 px-6 py-6 font-sans text-sm text-dark">
-          <li><a onClick={() => setIsOpen(false)} href="#services" className="hover:text-primary">Services</a></li>
-          <li><a onClick={() => setIsOpen(false)} href="#products" className="hover:text-primary">Products</a></li>
-          <li><a onClick={() => setIsOpen(false)} href="#about" className="hover:text-primary">About</a></li>
-          <li><a onClick={() => setIsOpen(false)} href="#contact" className="hover:text-primary">Contact</a></li>
+          <li><a onClick={() => setIsOpen(false)} href="/#services" className="hover:text-primary">Services</a></li>
+          <li><a onClick={() => setIsOpen(false)} href="/#products" className="hover:text-primary">Products</a></li>
+          <li><a onClick={() => setIsOpen(false)} href="/#about" className="hover:text-primary">About</a></li>
+          <li><a onClick={() => setIsOpen(false)} href="/#contact" className="hover:text-primary">Contact</a></li>
 
           <li>
             <a
