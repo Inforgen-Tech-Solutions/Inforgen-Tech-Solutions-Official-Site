@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import type { products } from "../../utils/types/product";
 import { useNavigate } from "react-router-dom";
 
-const ProductCard = ({ id, name, imageUrl, description, amount, slug }: products) => {
+const ProductCard = ({ name, imageUrl, description, amount, slug }: products) => {
 const navigate = useNavigate()
 
   const navigateToProduct = () => {

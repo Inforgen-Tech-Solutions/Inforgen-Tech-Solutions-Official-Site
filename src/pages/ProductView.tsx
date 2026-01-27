@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom"
 import { motion } from "framer-motion"
 import {
   ShoppingCart,
-  MessageCircle,
-  Facebook
+  // MessageCircle,
+  // Facebook
 } from "lucide-react"
 import Swal from "sweetalert2"
 import FullPage from "../layout/FullPage"
