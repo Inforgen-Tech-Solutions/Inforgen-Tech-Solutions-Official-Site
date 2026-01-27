@@ -1,13 +1,35 @@
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { useState } from "react";
 import {
   Mail,
   Phone,
   MapPin,
   ArrowRight
-} from "lucide-react"
-import FullPage from "../layout/FullPage"
+} from "lucide-react";
+import FullPage from "../layout/FullPage";
+import Swal from "sweetalert2";
+import type { ContactFormData } from "../utils/types/contact";
 
 const Contact = () => {
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: "",
+    email: "",
+    message: ""
+  })
+
+  const handleChange = (e : React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState, 
+      [name as keyof ContactFormData]: value
+    })
+  )}
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement >) => {
+    e.preventDefault();
+    Swal.fire("Ooops", "Feature is coming soon. Use other contact means Instead", 'info')
+  }
+
   return (
     <FullPage>
       <main className="bg-base">
@@ -64,7 +86,7 @@ const Contact = () => {
                     Phone
                   </h3>
                   <p className="font-sans text-dark/70 text-[clamp(0.9rem,2.5vw,1rem)]">
-                    +260972292235
+                    <a href="tel:+260972292235">+260972292235</a>
                   </p>
                 </div>
               </div>
@@ -78,7 +100,7 @@ const Contact = () => {
                     Location
                   </h3>
                   <p className="font-sans text-dark/70 text-[clamp(0.9rem,2.5vw,1rem)]">
-                    Zambia — Serving Nationwide
+                    Katima Mulilo Rd, lusaka Zambia
                   </p>
                 </div>
               </div>
@@ -90,6 +112,7 @@ const Contact = () => {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
               className="rounded-2xl border border-muted bg-white p-8 shadow-lg"
+              onSubmit={handleFormSubmit}
             >
               <div className="space-y-6">
                 <div>
@@ -98,6 +121,9 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="mt-2 w-full rounded-xl border border-muted px-4 py-3 font-sans text-sm focus:border-accent focus:outline-none"
                   />
                 </div>
@@ -108,6 +134,9 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="mt-2 w-full rounded-xl border border-muted px-4 py-3 font-sans text-sm focus:border-accent focus:outline-none"
                   />
                 </div>
@@ -118,6 +147,9 @@ const Contact = () => {
                   </label>
                   <textarea
                     rows={4}
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     className="mt-2 w-full rounded-xl border border-muted px-4 py-3 font-sans text-sm focus:border-accent focus:outline-none"
                   />
                 </div>
@@ -133,14 +165,6 @@ const Contact = () => {
             </motion.form>
           </div>
         </section>
-        {/* <section>
-          <div className="map">
-
-          </div>
-          <div className="words">
-            Find Us
-          </div>
-        </section> */}
       </main>
     </FullPage>
   )

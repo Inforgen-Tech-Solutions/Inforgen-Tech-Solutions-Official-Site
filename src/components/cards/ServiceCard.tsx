@@ -27,7 +27,7 @@ const ServiceCard = ({ name, icon: Icon, description }: services) => {
             {name}
           </h3>
 
-          <p className="font-sans text-[clamp(0.9rem,2.5vw,1rem)] leading-relaxed text-dark/70">
+          <p className="font-sans text-[clamp(0.8rem,2.5vw,1rem)] leading-relaxed text-dark/70">
             {description}
           </p>
         </div>

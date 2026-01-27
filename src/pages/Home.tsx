@@ -36,7 +36,7 @@ const Home = () => {
                 <span className="text-accent"> Smart Technology</span>
               </h1>
 
-              <p className="mx-auto max-w-3xl font-sans leading-relaxed text-dark text-[clamp(0.8rem,3vw,1.15rem)]">
+              <p className="mx-auto max-w-3xl font-sans leading-relaxed text-dark text-[clamp(0.9rem,3vw,1.15rem)]">
                 Inforgen Tech Solutions delivers software development, hardware
                 solutions, networking, and Starlink installations designed to
                 keep individuals and businesses connected and productive.
@@ -46,7 +46,7 @@ const Home = () => {
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
               <a
                 href="/contact"
-                className="group inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-4 font-sans font-semibold text-primary text-[clamp(0.95rem,2.5vw,1rem)] transition hover:opacity-90"
+                className="group inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-4 font-sans font-semibold text-primary text-[clamp(0.8rem,2.5vw,1rem)] transition hover:opacity-90"
               >
                 Request a Quote
                 <ArrowRight className="transition-transform group-hover:translate-x-1" size={18} />
@@ -54,7 +54,7 @@ const Home = () => {
 
               <a
                 href="#services"
-                className="rounded-xl border border-muted px-8 py-4 font-sans font-semibold text-dark text-[clamp(0.95rem,2.5vw,1rem)] transition hover:border-primary hover:text-primary"
+                className="rounded-xl border border-muted px-8 py-4 font-sans font-semibold text-dark text-[clamp(0.8rem,2.5vw,1rem)] transition hover:border-primary hover:text-primary"
               >
                 View Services
               </a>
@@ -74,10 +74,10 @@ const Home = () => {
             <span className="inline-block rounded-full border border-muted px-4 py-1.5 font-sans text-[clamp(0.75rem,2.5vw,0.875rem)] text-primary">
               What We Do
             </span>
-            <h2 className="font-heading font-bold text-primary text-[clamp(1.75rem,5vw,3rem)]">
+            <h2 className="font-heading font-bold text-primary text-[clamp(1.4rem,5vw,2.2rem)]">
               Our Services
             </h2>
-            <p className="mx-auto max-w-2xl font-sans text-dark text-[clamp(0.95rem,3vw,1.125rem)]">
+            <p className="mx-auto max-w-2xl font-sans text-dark text-[clamp(0.9rem,3vw,1rem)]">
               End-to-end IT solutions covering software, hardware, networking,
               and internet connectivity.
             </p>
@@ -107,10 +107,10 @@ const Home = () => {
             <span className="inline-block rounded-full border border-muted px-4 py-1.5 font-sans text-[clamp(0.75rem,2.5vw,0.875rem)] text-primary">
               Products
             </span>
-            <h2 className="font-heading font-bold text-primary text-[clamp(1.75rem,5vw,3rem)]">
+            <h2 className="font-heading font-bold text-primary text-[clamp(1.4rem,5vw,2.2rem)]">
               Hardware & Devices
             </h2>
-            <p className="mx-auto max-w-2xl font-sans text-dark text-[clamp(0.95rem,3vw,1.125rem)]">
+            <p className="mx-auto max-w-2xl font-sans text-dark text-[clamp(0.9rem,3vw,1rem)]">
               Quality laptops, networking devices, Arduino kits, and internet
               equipment you can rely on.
             </p>
@@ -148,14 +148,14 @@ const Home = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true }}
-        // className="mx-auto max-w-7xl px-6 py-16 md:py-24"
+          className="mx-auto max-w-7xl px-4"
         >
-          <div className="p-12 text-center md:p-16">
-            <div className="mx-auto max-w-3xl space-y-3">
-              <h2 className="font-heading font-bold text-primary text-[clamp(1.75rem,5vw,3rem)]">
+          <div className="py-12 text-center md:py-16">
+            <div className="space-y-3">
+              <h2 className="font-heading font-bold text-primary text-[clamp(1.4rem,5vw,2.2rem)]">
                 Let’s Build the Right Solution
               </h2>
-              <p className="font-sans text-primary/80 text-[clamp(0.95rem,3vw,1.125rem)]">
+              <p className="font-sans text-primary/80 text-[clamp(0.9rem,3vw,1rem)]">
                 Whether you need software, devices, networking, or Starlink
                 installation, our team is ready to help.
               </p>

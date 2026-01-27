@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../assets/InforgenNB.png"
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -6,15 +7,21 @@ const Navbar: React.FC = () => {
   return (
     <header className="bg-base border-b border-muted relative">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        
-        {/* Logo / Brand */}
-        <div className="flex items-center gap-2">
-          <span className="text-xl font-heading font-bold text-primary">
-            Inforgen Tech
-          </span>
-          <span className="text-xl font-heading font-bold text-accent">
-            Solutions
-          </span>
+
+        {/* Brand */}
+        <a href="/" className="hidden md:flex items-center gap-2">
+            <img src={logo} alt="logo" className="h-10 w-10" />
+            <span className="text-xl font-heading font-bold text-primary">
+              Inforgen Tech
+            </span>
+            <span className="text-xl font-heading font-bold text-accent">
+              Solutions
+            </span>
+        </a>
+
+        {/* Logo */}
+        <div className="block md:hidden">
+          <a href="/"><img src={logo} alt="logo" className="h-10 w-14" /></a>
         </div>
 
         {/* Desktop Navigation */}
@@ -57,9 +64,8 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute left-0 top-full w-full bg-base border-t border-muted transition-all duration-300 ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`md:hidden absolute left-0 top-full w-full bg-base border-t border-muted transition-all duration-300 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
       >
         <ul className="flex flex-col gap-6 px-6 py-6 font-sans text-sm text-dark">
           <li><a onClick={() => setIsOpen(false)} href="/#services" className="hover:text-primary">Services</a></li>

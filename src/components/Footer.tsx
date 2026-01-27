@@ -64,7 +64,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <MapPin size={16} />
-                <span>Lusaka, Zambia</span>
+                <span>Katima Mulilo Rd, lusaka Zambia</span>
               </li>
             </ul>
           </div>

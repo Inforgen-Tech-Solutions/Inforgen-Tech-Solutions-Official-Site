@@ -23,7 +23,7 @@ const navigate = useNavigate()
 
       <div className="relative flex h-full flex-col p-6">
         <div className="mb-6">
-          <div className="h-48 w-full overflow-hidden rounded-xl bg-muted p-1 transition-transform duration-300 group-hover:scale-105">
+          <div className="h-48 w-full overflow-hidden rounded-xl bg-muted transition-transform duration-300 group-hover:scale-105">
             <img
               src={imageUrl}
               alt={name}
